@@ -7,7 +7,10 @@
             "last_name": "Петров",
             "rating": 5,
             "text": "Кроссовки хорошие. Удобные. Как по мне сшиты.",
-            "created": "1 час назад"
+            "created": "1 час назад",
+            "photo_urls": [
+                "https://i.pinimg.com/736x/2e/94/bc/2e94bc6e4dbc52ac8271b19326fd1dfa.jpg",
+            ]
         },
         {
             "avatar_url": "https://i.pinimg.com/736x/2e/94/bc/2e94bc6e4dbc52ac8271b19326fd1dfa.jpg",
@@ -53,8 +56,6 @@
             "text": "",
             "created": "вчера в 12:39"
         },
-
-
         {
             "first_name": "Иван",
             "last_name": "Петров",

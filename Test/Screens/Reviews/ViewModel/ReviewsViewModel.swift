@@ -65,6 +65,7 @@ private extension ReviewsViewModel {
             state.shouldLoad = true
         }
         
+        state.isLoading = false
         onStateChange?(state)
     }
 
@@ -93,12 +94,15 @@ private extension ReviewsViewModel {
         let username = (review.firstName + " " + review.lastName).attributed(font: .username)
         let reviewText = review.text.attributed(font: .text)
         let created = review.created.attributed(font: .created, color: .created)
+        let photoItems = review.photoUrls?.compactMap(ReviewPhotoCellConfig.init)
+        
         let item = ReviewItem(
-            avatarUrl: review.avatarUrl,
+            avatarUrl: URL(string: review.avatarUrl ?? ""),
             username: username,
             rating: review.rating,
             reviewText: reviewText,
             created: created,
+            reviewPhotoItems: photoItems ?? [],
             onTapShowMore: { [weak self] id in self?.showMoreReview(with: id) }
         )
         return item

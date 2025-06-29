@@ -7,13 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		18B096352E1156F8003F15F4 /* ReviewsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B096342E1156F8003F15F4 /* ReviewsProviding.swift */; };
-		18B096362E1156F8003F15F4 /* MockReviewsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B096332E1156F8003F15F4 /* MockReviewsProvider.swift */; };
-		18B096392E1156F8003F15F4 /* ReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B096372E1156F8003F15F4 /* ReviewsViewModel.swift */; };
-		18B0963A2E1156F8003F15F4 /* ReviewsViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B096382E1156F8003F15F4 /* ReviewsViewModelState.swift */; };
-		18B096412E1156F8003F15F4 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B096402E1156F8003F15F4 /* ReviewsViewController.swift */; };
-		18B096422E1156F8003F15F4 /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0963F2E1156F8003F15F4 /* ReviewsView.swift */; };
-		18B096452E1156F8003F15F4 /* RatingRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0963E2E1156F8003F15F4 /* RatingRenderer.swift */; };
 		18B096502E117BD0003F15F4 /* ImageLoader in Frameworks */ = {isa = PBXBuildFile; productRef = 18B0964F2E117BD0003F15F4 /* ImageLoader */; };
 		2166686F2D48E23F009AAA76 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166686E2D48E23F009AAA76 /* Fonts.swift */; };
 		216668712D48E4B2009AAA76 /* NSAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216668702D48E4B2009AAA76 /* NSAttributedString+Ext.swift */; };
@@ -31,13 +24,6 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		18B096332E1156F8003F15F4 /* MockReviewsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReviewsProvider.swift; sourceTree = "<group>"; };
-		18B096342E1156F8003F15F4 /* ReviewsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsProviding.swift; sourceTree = "<group>"; };
-		18B096372E1156F8003F15F4 /* ReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewModel.swift; sourceTree = "<group>"; };
-		18B096382E1156F8003F15F4 /* ReviewsViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewModelState.swift; sourceTree = "<group>"; };
-		18B0963E2E1156F8003F15F4 /* RatingRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingRenderer.swift; sourceTree = "<group>"; };
-		18B0963F2E1156F8003F15F4 /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
-		18B096402E1156F8003F15F4 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
 		18B0964D2E1163EB003F15F4 /* ImageLoader */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ImageLoader; sourceTree = "<group>"; };
 		2166686E2D48E23F009AAA76 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		216668702D48E4B2009AAA76 /* NSAttributedString+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Ext.swift"; sourceTree = "<group>"; };
@@ -56,9 +42,19 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		18B096492E116232003F15F4 /* Cells */ = {
+		18B0965B2E11AE64003F15F4 /* ReviewsProvider */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = Cells;
+			path = ReviewsProvider;
+			sourceTree = "<group>";
+		};
+		18B0965C2E11AE7C003F15F4 /* View */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = View;
+			sourceTree = "<group>";
+		};
+		18B096642E11AE90003F15F4 /* ViewModel */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -153,15 +149,10 @@
 		21B82E372D47B1090085DAA2 /* Reviews */ = {
 			isa = PBXGroup;
 			children = (
-				18B096492E116232003F15F4 /* Cells */,
-				18B096332E1156F8003F15F4 /* MockReviewsProvider.swift */,
-				18B0963E2E1156F8003F15F4 /* RatingRenderer.swift */,
-				18B096342E1156F8003F15F4 /* ReviewsProviding.swift */,
 				21ED1F642D69D0340012D6F6 /* ReviewsScreenFactory.swift */,
-				18B0963F2E1156F8003F15F4 /* ReviewsView.swift */,
-				18B096402E1156F8003F15F4 /* ReviewsViewController.swift */,
-				18B096372E1156F8003F15F4 /* ReviewsViewModel.swift */,
-				18B096382E1156F8003F15F4 /* ReviewsViewModelState.swift */,
+				18B0965C2E11AE7C003F15F4 /* View */,
+				18B096642E11AE90003F15F4 /* ViewModel */,
+				18B0965B2E11AE64003F15F4 /* ReviewsProvider */,
 			);
 			path = Reviews;
 			sourceTree = "<group>";
@@ -208,7 +199,9 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				18B096492E116232003F15F4 /* Cells */,
+				18B0965B2E11AE64003F15F4 /* ReviewsProvider */,
+				18B0965C2E11AE7C003F15F4 /* View */,
+				18B096642E11AE90003F15F4 /* ViewModel */,
 			);
 			name = Test;
 			packageProductDependencies = (
@@ -274,15 +267,8 @@
 			files = (
 				21B82E392D47B1320085DAA2 /* Review.swift in Sources */,
 				21ED1F622D69CBCD0012D6F6 /* RootView.swift in Sources */,
-				18B096392E1156F8003F15F4 /* ReviewsViewModel.swift in Sources */,
-				18B0963A2E1156F8003F15F4 /* ReviewsViewModelState.swift in Sources */,
-				18B096352E1156F8003F15F4 /* ReviewsProviding.swift in Sources */,
-				18B096362E1156F8003F15F4 /* MockReviewsProvider.swift in Sources */,
 				216668712D48E4B2009AAA76 /* NSAttributedString+Ext.swift in Sources */,
 				21ED1F602D69C85E0012D6F6 /* RootViewController.swift in Sources */,
-				18B096412E1156F8003F15F4 /* ReviewsViewController.swift in Sources */,
-				18B096422E1156F8003F15F4 /* ReviewsView.swift in Sources */,
-				18B096452E1156F8003F15F4 /* RatingRenderer.swift in Sources */,
 				21B8416B2D47BFA10085DAA2 /* Reviews.swift in Sources */,
 				216668732D48E89A009AAA76 /* Colors.swift in Sources */,
 				21B841712D47C5F00085DAA2 /* TableCellConfig.swift in Sources */,

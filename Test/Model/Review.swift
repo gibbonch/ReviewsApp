@@ -13,5 +13,7 @@ struct Review: Decodable {
     let text: String
     /// Время создания отзыва.
     let created: String
+    /// Ссылки на изображения в отзыве.
+    let photoUrls: [String]?
 
 }

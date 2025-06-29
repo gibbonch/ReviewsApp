@@ -62,29 +62,30 @@ extension ReviewsTotalCell {
 
 private final class ReviewsTotalCellLayout {
     
+    enum Constants {
+        /// Отступы от краёв ячейки до её содержимого.
+        static let insets = UIEdgeInsets(top: 9.0, left: 12.0, bottom: 9.0, right: 12.0)
+    }
+    
     // MARK: - Фреймы
     
     private(set) var totalLabelFrame = CGRect.zero
-    
-    // MARK: - Отступы
-    
-    /// Отступы от краёв ячейки до её содержимого.
-    private let insets = UIEdgeInsets(top: 9.0, left: 12.0, bottom: 9.0, right: 12.0)
     
     // MARK: - Расчёт фреймов и высоты ячейки
     
     /// Возвращает высоту ячейку с данной конфигурацией `config` и ограничением по ширине `maxWidth`.
     func height(config: Config, maxWidth: CGFloat) -> CGFloat {
-        let contentWidth = maxWidth - insets.left - insets.right
-        var maxY = insets.top
+        let contentWidth = maxWidth - Constants.insets.left - Constants.insets.right
+        var maxY = Constants.insets.top
+        var maxX = Constants.insets.left
         
         totalLabelFrame = CGRect(
-            origin: CGPoint(x: insets.left, y: maxY),
+            origin: CGPoint(x: maxX, y: maxY),
             size: CGSize(width: contentWidth, height: config.totalText.boundingRect(width: contentWidth).height)
         )
         maxY = totalLabelFrame.maxY
         
-        return maxY + insets.bottom
+        return maxY + Constants.insets.bottom
     }
     
 }

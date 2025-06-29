@@ -8,14 +8,14 @@ public final class ImageLoader {
         case networkError(Swift.Error)
     }
     
-    static let shared = ImageLoader(configuration: .default)
+    public static let shared = ImageLoader(configuration: .default)
     
     private let configuration: ImageLoaderConfiguration
     private let memoryCache: MemoryCache
     private let session: URLSession
     private let semaphore: DispatchSemaphore
     
-    init(configuration: ImageLoaderConfiguration) {
+    public init(configuration: ImageLoaderConfiguration) {
         self.configuration = configuration
         
         let config = URLSessionConfiguration.default
@@ -70,6 +70,15 @@ public extension ImageLoader {
         
         task.resume()
         return task
+    }
+    
+    func clearCache(type: CacheType) {
+        switch type {
+        case .memory:
+            memoryCache.clearAll()
+        case .disk:
+            break
+        }
     }
     
 }

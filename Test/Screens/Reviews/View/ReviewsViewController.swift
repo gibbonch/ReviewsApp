@@ -1,4 +1,5 @@
 import UIKit
+import ImageLoader
 
 final class ReviewsViewController: UIViewController {
 
@@ -24,6 +25,11 @@ final class ReviewsViewController: UIViewController {
         setupViewModel()
         viewModel.getReviews()
     }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        ImageLoader.shared.clearCache(type: .memory)
+    }
 
 }
 
@@ -39,8 +45,13 @@ private extension ReviewsViewController {
     }
 
     func setupViewModel() {
-        viewModel.onStateChange = { [weak reviewsView] _ in
+        viewModel.onStateChange = { [weak reviewsView] state in
             reviewsView?.tableView.reloadData()
+            if state.isLoading {
+                reviewsView?.startAnimating()
+            } else {
+                reviewsView?.stopAnimating()
+            }
         }
     }
 
