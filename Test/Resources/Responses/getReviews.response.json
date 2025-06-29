@@ -2,6 +2,7 @@
     "count": 127,
     "items": [
         {
+            "avatar_url": "https://i.pinimg.com/736x/2e/94/bc/2e94bc6e4dbc52ac8271b19326fd1dfa.jpg",
             "first_name": "Иван",
             "last_name": "Петров",
             "rating": 5,
@@ -9,6 +10,7 @@
             "created": "1 час назад"
         },
         {
+            "avatar_url": "https://i.pinimg.com/736x/2e/94/bc/2e94bc6e4dbc52ac8271b19326fd1dfa.jpg",
             "first_name": "Екатерина",
             "last_name": "Иванова",
             "rating": 3,
@@ -16,6 +18,7 @@
             "created": "12 минут назад"
         },
         {
+            "avatar_url": "https://i.pinimg.com/736x/2e/94/bc/2e94bc6e4dbc52ac8271b19326fd1dfa.jpg",
             "first_name": "Евгения",
             "last_name": "Петрова",
             "rating": 4,

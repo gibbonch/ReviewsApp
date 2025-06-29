@@ -57,6 +57,7 @@ private extension ReviewsViewModel {
             state.items += reviews.items.map(makeReviewItem)
             state.offset += state.limit
             state.shouldLoad = state.offset < reviews.count
+            
             if !state.shouldLoad {
                 state.items.append(makeReviewsTotalItem(reviews.count))
             }
@@ -93,6 +94,7 @@ private extension ReviewsViewModel {
         let reviewText = review.text.attributed(font: .text)
         let created = review.created.attributed(font: .created, color: .created)
         let item = ReviewItem(
+            avatarUrl: review.avatarUrl,
             username: username,
             rating: review.rating,
             reviewText: reviewText,

@@ -7,6 +7,14 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		18B096352E1156F8003F15F4 /* ReviewsProviding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B096342E1156F8003F15F4 /* ReviewsProviding.swift */; };
+		18B096362E1156F8003F15F4 /* MockReviewsProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B096332E1156F8003F15F4 /* MockReviewsProvider.swift */; };
+		18B096392E1156F8003F15F4 /* ReviewsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B096372E1156F8003F15F4 /* ReviewsViewModel.swift */; };
+		18B0963A2E1156F8003F15F4 /* ReviewsViewModelState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B096382E1156F8003F15F4 /* ReviewsViewModelState.swift */; };
+		18B096412E1156F8003F15F4 /* ReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B096402E1156F8003F15F4 /* ReviewsViewController.swift */; };
+		18B096422E1156F8003F15F4 /* ReviewsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0963F2E1156F8003F15F4 /* ReviewsView.swift */; };
+		18B096452E1156F8003F15F4 /* RatingRenderer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18B0963E2E1156F8003F15F4 /* RatingRenderer.swift */; };
+		18B096502E117BD0003F15F4 /* ImageLoader in Frameworks */ = {isa = PBXBuildFile; productRef = 18B0964F2E117BD0003F15F4 /* ImageLoader */; };
 		2166686F2D48E23F009AAA76 /* Fonts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2166686E2D48E23F009AAA76 /* Fonts.swift */; };
 		216668712D48E4B2009AAA76 /* NSAttributedString+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216668702D48E4B2009AAA76 /* NSAttributedString+Ext.swift */; };
 		216668732D48E89A009AAA76 /* Colors.swift in Sources */ = {isa = PBXBuildFile; fileRef = 216668722D48E89A009AAA76 /* Colors.swift */; };
@@ -23,6 +31,14 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		18B096332E1156F8003F15F4 /* MockReviewsProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockReviewsProvider.swift; sourceTree = "<group>"; };
+		18B096342E1156F8003F15F4 /* ReviewsProviding.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsProviding.swift; sourceTree = "<group>"; };
+		18B096372E1156F8003F15F4 /* ReviewsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewModel.swift; sourceTree = "<group>"; };
+		18B096382E1156F8003F15F4 /* ReviewsViewModelState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewModelState.swift; sourceTree = "<group>"; };
+		18B0963E2E1156F8003F15F4 /* RatingRenderer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RatingRenderer.swift; sourceTree = "<group>"; };
+		18B0963F2E1156F8003F15F4 /* ReviewsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsView.swift; sourceTree = "<group>"; };
+		18B096402E1156F8003F15F4 /* ReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReviewsViewController.swift; sourceTree = "<group>"; };
+		18B0964D2E1163EB003F15F4 /* ImageLoader */ = {isa = PBXFileReference; lastKnownFileType = wrapper; path = ImageLoader; sourceTree = "<group>"; };
 		2166686E2D48E23F009AAA76 /* Fonts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fonts.swift; sourceTree = "<group>"; };
 		216668702D48E4B2009AAA76 /* NSAttributedString+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NSAttributedString+Ext.swift"; sourceTree = "<group>"; };
 		216668722D48E89A009AAA76 /* Colors.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Colors.swift; sourceTree = "<group>"; };
@@ -40,19 +56,9 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
-		18B096242E114056003F15F4 /* View */ = {
+		18B096492E116232003F15F4 /* Cells */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
-			path = View;
-			sourceTree = "<group>";
-		};
-		18B096282E11406C003F15F4 /* ViewModel */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ViewModel;
-			sourceTree = "<group>";
-		};
-		18B096292E11407B003F15F4 /* ReviewsProvider */ = {
-			isa = PBXFileSystemSynchronizedRootGroup;
-			path = ReviewsProvider;
+			path = Cells;
 			sourceTree = "<group>";
 		};
 /* End PBXFileSystemSynchronizedRootGroup section */
@@ -62,6 +68,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				18B096502E117BD0003F15F4 /* ImageLoader in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +96,7 @@
 			isa = PBXGroup;
 			children = (
 				21B82E2C2D47B0640085DAA2 /* Test */,
+				18B0964D2E1163EB003F15F4 /* ImageLoader */,
 				21B82DFA2D4792300085DAA2 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -132,12 +140,12 @@
 			isa = PBXGroup;
 			children = (
 				21B82E2B2D47B0640085DAA2 /* AppDelegate.swift */,
-				21B82E2A2D47B0640085DAA2 /* Screens */,
-				2166686D2D48DEBF009AAA76 /* Protocols */,
-				21B841682D47BC7F0085DAA2 /* Model */,
 				216668742D48EA59009AAA76 /* Constants */,
 				21B82E222D47B0640085DAA2 /* Extensions */,
+				21B841682D47BC7F0085DAA2 /* Model */,
+				2166686D2D48DEBF009AAA76 /* Protocols */,
 				21B82E242D47B0640085DAA2 /* Resources */,
+				21B82E2A2D47B0640085DAA2 /* Screens */,
 			);
 			path = Test;
 			sourceTree = "<group>";
@@ -145,10 +153,15 @@
 		21B82E372D47B1090085DAA2 /* Reviews */ = {
 			isa = PBXGroup;
 			children = (
-				18B096292E11407B003F15F4 /* ReviewsProvider */,
-				18B096282E11406C003F15F4 /* ViewModel */,
-				18B096242E114056003F15F4 /* View */,
+				18B096492E116232003F15F4 /* Cells */,
+				18B096332E1156F8003F15F4 /* MockReviewsProvider.swift */,
+				18B0963E2E1156F8003F15F4 /* RatingRenderer.swift */,
+				18B096342E1156F8003F15F4 /* ReviewsProviding.swift */,
 				21ED1F642D69D0340012D6F6 /* ReviewsScreenFactory.swift */,
+				18B0963F2E1156F8003F15F4 /* ReviewsView.swift */,
+				18B096402E1156F8003F15F4 /* ReviewsViewController.swift */,
+				18B096372E1156F8003F15F4 /* ReviewsViewModel.swift */,
+				18B096382E1156F8003F15F4 /* ReviewsViewModelState.swift */,
 			);
 			path = Reviews;
 			sourceTree = "<group>";
@@ -195,12 +208,11 @@
 			dependencies = (
 			);
 			fileSystemSynchronizedGroups = (
-				18B096242E114056003F15F4 /* View */,
-				18B096282E11406C003F15F4 /* ViewModel */,
-				18B096292E11407B003F15F4 /* ReviewsProvider */,
+				18B096492E116232003F15F4 /* Cells */,
 			);
 			name = Test;
 			packageProductDependencies = (
+				18B0964F2E117BD0003F15F4 /* ImageLoader */,
 			);
 			productName = Test;
 			productReference = 21B82DF92D4792300085DAA2 /* Test.app */;
@@ -230,6 +242,9 @@
 			);
 			mainGroup = 21B82DF02D4792300085DAA2;
 			minimizedProjectReferenceProxies = 1;
+			packageReferences = (
+				18B0964E2E117BD0003F15F4 /* XCLocalSwiftPackageReference "ImageLoader" */,
+			);
 			preferredProjectObjectVersion = 77;
 			productRefGroup = 21B82DFA2D4792300085DAA2 /* Products */;
 			projectDirPath = "";
@@ -259,8 +274,15 @@
 			files = (
 				21B82E392D47B1320085DAA2 /* Review.swift in Sources */,
 				21ED1F622D69CBCD0012D6F6 /* RootView.swift in Sources */,
+				18B096392E1156F8003F15F4 /* ReviewsViewModel.swift in Sources */,
+				18B0963A2E1156F8003F15F4 /* ReviewsViewModelState.swift in Sources */,
+				18B096352E1156F8003F15F4 /* ReviewsProviding.swift in Sources */,
+				18B096362E1156F8003F15F4 /* MockReviewsProvider.swift in Sources */,
 				216668712D48E4B2009AAA76 /* NSAttributedString+Ext.swift in Sources */,
 				21ED1F602D69C85E0012D6F6 /* RootViewController.swift in Sources */,
+				18B096412E1156F8003F15F4 /* ReviewsViewController.swift in Sources */,
+				18B096422E1156F8003F15F4 /* ReviewsView.swift in Sources */,
+				18B096452E1156F8003F15F4 /* RatingRenderer.swift in Sources */,
 				21B8416B2D47BFA10085DAA2 /* Reviews.swift in Sources */,
 				216668732D48E89A009AAA76 /* Colors.swift in Sources */,
 				21B841712D47C5F00085DAA2 /* TableCellConfig.swift in Sources */,
@@ -477,6 +499,20 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCLocalSwiftPackageReference section */
+		18B0964E2E117BD0003F15F4 /* XCLocalSwiftPackageReference "ImageLoader" */ = {
+			isa = XCLocalSwiftPackageReference;
+			relativePath = ImageLoader;
+		};
+/* End XCLocalSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		18B0964F2E117BD0003F15F4 /* ImageLoader */ = {
+			isa = XCSwiftPackageProductDependency;
+			productName = ImageLoader;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 21B82DF12D4792300085DAA2 /* Project object */;
 }

@@ -1,4 +1,5 @@
 import UIKit
+import ImageLoader
 
 /// Конфигурация ячейки. Содержит данные для отображения в ячейке.
 struct ReviewCellConfig {
@@ -8,6 +9,8 @@ struct ReviewCellConfig {
     
     /// Идентификатор конфигурации. Можно использовать для поиска конфигурации в массиве.
     let id = UUID()
+    /// Ссылка на аватар пользователя.
+    let avatarUrl: String?
     /// Имя и фамилия пользователя.
     let username: NSAttributedString
     /// Рейтинг.
@@ -36,6 +39,9 @@ extension ReviewCellConfig: TableCellConfig {
     func update(cell: UITableViewCell) {
         guard let cell = cell as? ReviewCell else { return }
         cell.avatarImageView.image = .avatarPlaceholder
+        if let avatarUrl, let url = URL(string: avatarUrl) {
+            cell.avatarImageView.setImage(from: url)
+        }
         cell.usernameLabel.attributedText = username
         cell.ratingImageView.image = ratingRenderer.ratingImage(rating)
         cell.reviewTextLabel.attributedText = reviewText
