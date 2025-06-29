@@ -77,7 +77,7 @@ private final class ReviewsTotalCellLayout {
     func height(config: Config, maxWidth: CGFloat) -> CGFloat {
         let contentWidth = maxWidth - Constants.insets.left - Constants.insets.right
         var maxY = Constants.insets.top
-        var maxX = Constants.insets.left
+        let maxX = Constants.insets.left
         
         totalLabelFrame = CGRect(
             origin: CGPoint(x: maxX, y: maxY),

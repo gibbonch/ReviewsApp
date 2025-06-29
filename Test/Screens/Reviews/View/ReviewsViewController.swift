@@ -23,6 +23,7 @@ final class ReviewsViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupViewModel()
+        setupRefreshControl()
         viewModel.getReviews()
     }
     
@@ -30,20 +31,20 @@ final class ReviewsViewController: UIViewController {
         super.didReceiveMemoryWarning()
         ImageLoader.shared.clearCache(type: .memory)
     }
-
+    
 }
 
 // MARK: - Private
 
 private extension ReviewsViewController {
-
+    
     func makeReviewsView() -> ReviewsView {
         let reviewsView = ReviewsView()
         reviewsView.tableView.delegate = viewModel
         reviewsView.tableView.dataSource = viewModel
         return reviewsView
     }
-
+    
     func setupViewModel() {
         viewModel.onStateChange = { [weak reviewsView] state in
             reviewsView?.tableView.reloadData()
@@ -52,7 +53,19 @@ private extension ReviewsViewController {
             } else {
                 reviewsView?.stopAnimating()
             }
+            
+            if !state.isRefreshing {
+                reviewsView?.refreshControl.endRefreshing()
+            }
         }
     }
-
+    
+    func setupRefreshControl() {
+        reviewsView.refreshControl.addTarget(self, action: #selector(handleRefresh), for: .valueChanged)
+    }
+    
+    @objc func handleRefresh() {
+        viewModel.refresh()
+    }
+    
 }

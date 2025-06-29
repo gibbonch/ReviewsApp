@@ -42,6 +42,16 @@ extension ReviewsViewModel {
             }
         }
     }
+    
+    func refresh() {
+        state.offset = 0
+        state.shouldLoad = false
+        reviewsProvider.getReviews(offset: state.offset) { [weak self] result in
+            DispatchQueue.main.async {
+                self?.gotReviews(result)
+            }
+        }
+    }
 
 }
 
@@ -61,11 +71,12 @@ private extension ReviewsViewModel {
             if !state.shouldLoad {
                 state.items.append(makeReviewsTotalItem(reviews.count))
             }
+            state.isRefreshing = false
+            state.isLoading = false
         } catch {
             state.shouldLoad = true
         }
         
-        state.isLoading = false
         onStateChange?(state)
     }
 
