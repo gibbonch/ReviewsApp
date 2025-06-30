@@ -8,19 +8,19 @@ final class ReviewsViewModel: NSObject {
 
     private var state: State
     private let reviewsProvider: ReviewsProviding
-    private let ratingRenderer: RatingRenderer
     private let decoder: JSONDecoder
+    private let router: ReviewsRouting
 
     init(
         state: State = State(),
         reviewsProvider: ReviewsProviding = MockReviewsProvider(),
-        ratingRenderer: RatingRenderer = RatingRenderer(),
-        decoder: JSONDecoder = JSONDecoder()
+        decoder: JSONDecoder = JSONDecoder(),
+        router: ReviewsRouting
     ) {
         self.state = state
         self.reviewsProvider = reviewsProvider
-        self.ratingRenderer = ratingRenderer
         self.decoder = decoder
+        self.router = router
         decoder.keyDecodingStrategy = .convertFromSnakeCase
     }
 
@@ -107,16 +107,30 @@ private extension ReviewsViewModel {
         let created = review.created.attributed(font: .created, color: .created)
         let photoItems = review.photoUrls?.compactMap(ReviewPhotoCellConfig.init)
         
-        let item = ReviewItem(
+        return ReviewItem(
             avatarUrl: URL(string: review.avatarUrl ?? ""),
             username: username,
             rating: review.rating,
             reviewText: reviewText,
             created: created,
             reviewPhotoItems: photoItems ?? [],
-            onTapShowMore: { [weak self] id in self?.showMoreReview(with: id) }
+            onTapShowMore: { [weak self] id in self?.showMoreReview(with: id) },
+            onTapPhotoCell: handlePhotoCellTap
         )
-        return item
+    }
+    
+    func handlePhotoCellTap(id: UUID, index: Int) {
+        let item = state.items
+            .compactMap { $0 as? ReviewItem }
+            .first { $0.id == id }
+        
+        let photos = item?.reviewPhotoItems
+            .map { $0.imageUrl }
+            .compactMap { URL(string: $0) }
+        
+        if let photos {
+            router.routeToReviewsPhotos(selectedIndex: index, photos: photos)
+        }
     }
     
     func makeReviewsTotalItem(_ total: Int) -> ReviewsTotalItem {

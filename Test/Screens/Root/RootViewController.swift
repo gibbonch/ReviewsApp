@@ -15,9 +15,10 @@ final class RootViewController: UIViewController {
 private extension RootViewController {
 
     func openReviews() {
+        guard let navigationController else { return }
         let factory = ReviewsScreenFactory()
-        let controller = factory.makeReviewsController()
-        navigationController?.pushViewController(controller, animated: true)
+        let controller = factory.makeReviewsController(navigationController: navigationController)
+        navigationController.pushViewController(controller, animated: true)
     }
 
 }

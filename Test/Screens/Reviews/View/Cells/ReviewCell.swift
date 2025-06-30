@@ -25,6 +25,8 @@ struct ReviewCellConfig {
     let reviewPhotoItems: [ReviewPhotoCellConfig]
     /// Замыкание, вызываемое при нажатии на кнопку "Показать полностью...".
     let onTapShowMore: (UUID) -> Void
+    /// Замыкание, вызываемое при нажатии на фото.
+    let onTapPhotoCell: (UUID, Int) -> Void
     
     /// Объект, хранящий посчитанные фреймы для ячейки отзыва.
     fileprivate let layout = ReviewCellLayout()
@@ -200,6 +202,13 @@ extension ReviewCell: UICollectionViewDataSource {
 // MARK: - UICollectionViewDelegate
 
 extension ReviewCell: UICollectionViewDelegate, UICollectionViewDelegateFlowLayout {
+    
+    func collectionView(_ collectionView: UICollectionView,
+                        didSelectItemAt indexPath: IndexPath) {
+        
+        guard let config else { return }
+        config.onTapPhotoCell(config.id, indexPath.row)
+    }
     
     func collectionView(_ collectionView: UICollectionView,
                         layout collectionViewLayout: UICollectionViewLayout,

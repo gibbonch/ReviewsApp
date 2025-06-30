@@ -2,7 +2,7 @@ import UIKit
 import ImageLoader
 
 struct ReviewPhotoCellConfig {
-    static let reuseId: String = "ReviewPhotoCell"
+    static let reuseId = String(describing: ReviewPhotoCell.self)
     let imageUrl: String
     
     func updateCell(cell: UICollectionViewCell) {

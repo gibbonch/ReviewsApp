@@ -12,7 +12,8 @@ public extension UIImageView {
     /// Загружает изображение по URL и устанавливает его в UIImageView.
     /// Предыдущая загрузка отменяется, если она ещё не завершена.
     func setImage(from url: URL,
-                  cacheType: CacheType = .memory) {
+                  cacheType: CacheType = .memory,
+                  completion: (() -> Void)? = nil) {
         
         imageLoadTask?.cancel()
         
@@ -23,6 +24,7 @@ public extension UIImageView {
                 switch result {
                 case .success(let image):
                     self.image = image
+                    completion?()
                 case .failure:
                     break
                 }
