@@ -35,6 +35,7 @@ final class ReviewPhotoCell: UICollectionViewCell {
         contentView.addSubview(imageView)
         imageView.layer.cornerRadius = 8
         imageView.layer.masksToBounds = true
+        imageView.backgroundColor = .lightGray.withAlphaComponent(0.3)
     }
     
 }

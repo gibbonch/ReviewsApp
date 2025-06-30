@@ -160,8 +160,8 @@
 		21B82E372D47B1090085DAA2 /* Reviews */ = {
 			isa = PBXGroup;
 			children = (
-				18B096652E127764003F15F4 /* Router */,
 				21ED1F642D69D0340012D6F6 /* ReviewsScreenFactory.swift */,
+				18B096652E127764003F15F4 /* Router */,
 				18B0965C2E11AE7C003F15F4 /* View */,
 				18B096642E11AE90003F15F4 /* ViewModel */,
 				18B0965B2E11AE64003F15F4 /* ReviewsProvider */,

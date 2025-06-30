@@ -2,21 +2,19 @@
     "count": 127,
     "items": [
         {
-            "avatar_url": "https://i.pinimg.com/736x/2e/94/bc/2e94bc6e4dbc52ac8271b19326fd1dfa.jpg",
+            "avatar_url": "https://github.com/gibbonch/ReviewsApp/blob/ffdb188d121b20c480b452dbf1c5702c4679d513/Images/avatar1.jpg?raw=true",
             "first_name": "Иван",
             "last_name": "Петров",
             "rating": 5,
             "text": "Кроссовки хорошие. Удобные. Как по мне сшиты.",
             "created": "1 час назад",
             "photo_urls": [
-                "https://i.pinimg.com/736x/2e/94/bc/2e94bc6e4dbc52ac8271b19326fd1dfa.jpg",
-                "https://i.pinimg.com/736x/2e/94/bc/2e94bc6e4dbc52ac8271b19326fd1dfa.jpg",
-                "https://i.pinimg.com/736x/2e/94/bc/2e94bc6e4dbc52ac8271b19326fd1dfa.jpg",
-                "https://i.pinimg.com/736x/2e/94/bc/2e94bc6e4dbc52ac8271b19326fd1dfa.jpg",
+                "https://github.com/gibbonch/ReviewsApp/blob/ffdb188d121b20c480b452dbf1c5702c4679d513/Images/shoes1.jpg?raw=true",
+                "https://github.com/gibbonch/ReviewsApp/blob/ffdb188d121b20c480b452dbf1c5702c4679d513/Images/shoes2.jpg?raw=true",
             ]
         },
         {
-            "avatar_url": "https://i.pinimg.com/736x/2e/94/bc/2e94bc6e4dbc52ac8271b19326fd1dfa.jpg",
+            "avatar_url": "https://github.com/gibbonch/ReviewsApp/blob/ffdb188d121b20c480b452dbf1c5702c4679d513/Images/avatar2.jpg?raw=true",
             "first_name": "Екатерина",
             "last_name": "Иванова",
             "rating": 3,
@@ -24,7 +22,6 @@
             "created": "12 минут назад"
         },
         {
-            "avatar_url": "https://i.pinimg.com/736x/2e/94/bc/2e94bc6e4dbc52ac8271b19326fd1dfa.jpg",
             "first_name": "Евгения",
             "last_name": "Петрова",
             "rating": 4,
@@ -36,14 +33,25 @@
             "last_name": "Петров",
             "rating": 2,
             "text": "Понравилось отношение - несмотря на то, что заказ был выполнен не идеально, продавец был очень любезен и шёл... Прошла по снегу 30 метров, 5 раз упала. Спасибо мужу, поддерживал. Возврат, к сожалению.",
-            "created": "минуту назад"
+            "created": "минуту назад",
+            "photo_urls": [
+                "https://github.com/gibbonch/ReviewsApp/blob/ffdb188d121b20c480b452dbf1c5702c4679d513/Images/shoes3.jpg?raw=true",
+            ]
         },
         {
+            "avatar_url": "https://github.com/gibbonch/ReviewsApp/blob/ffdb188d121b20c480b452dbf1c5702c4679d513/Images/avatar4.jpg?raw=true",
             "first_name": "Никита",
             "last_name": "Иванов",
             "rating": 5,
             "text": "Отлично выглядят, хоть и скользковатые...",
-            "created": "только что"
+            "created": "только что",
+            "photo_urls": [
+                "https://github.com/gibbonch/ReviewsApp/blob/ffdb188d121b20c480b452dbf1c5702c4679d513/Images/shoes2.jpg?raw=true",
+                "https://github.com/gibbonch/ReviewsApp/blob/ffdb188d121b20c480b452dbf1c5702c4679d513/Images/shoes4.jpg?raw=true",
+                "https://github.com/gibbonch/ReviewsApp/blob/ffdb188d121b20c480b452dbf1c5702c4679d513/Images/shoes5.jpg?raw=true",
+                "https://github.com/gibbonch/ReviewsApp/blob/ffdb188d121b20c480b452dbf1c5702c4679d513/Images/shoes6.jpg?raw=true",
+                "https://github.com/gibbonch/ReviewsApp/blob/ffdb188d121b20c480b452dbf1c5702c4679d513/Images/shoes1.jpg?raw=true"
+            ]
         },
         {
             "first_name": "Олег",
@@ -53,6 +61,7 @@
             "created": "15 минут назад"
         },
         {
+            "avatar_url": "https://github.com/gibbonch/ReviewsApp/blob/ffdb188d121b20c480b452dbf1c5702c4679d513/Images/avatar5.jpg?raw=true",
             "first_name": "Николай",
             "last_name": "Петров",
             "rating": 2,
@@ -74,6 +83,7 @@
             "created": "12 минут назад"
         },
         {
+            "avatar_url": "https://github.com/gibbonch/ReviewsApp/blob/ffdb188d121b20c480b452dbf1c5702c4679d513/Images/avatar3.jpg?raw=true",
             "first_name": "Евгения",
             "last_name": "Петрова",
             "rating": 4,
