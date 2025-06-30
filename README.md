@@ -66,4 +66,4 @@ open Test.xcodeproj
 
 ## Демонстрация
 
-[Screencast функционала (MP4)](https://github.com/gibbonch/ReviewsApp/blob/901a37001a6bb645ca56b1673942de4b807f1d13/Screencast/screencast.mp4)
+[Screencast функционала (MP4)](https://github.com/gibbonch/ReviewsApp/blob/d6b925c7f05121335e5feeb112884a6ddcd71261/Screencast/screencast.mp4)
